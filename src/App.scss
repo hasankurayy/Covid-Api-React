@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+    color: white;
+
+    .header {
+        display: flex;
+        justify-content: center;
+        margin: 30px auto;
+        padding-bottom: 20px;
+        font-size: 45px;
+        font-weight: bold;
+        border-bottom: 1px solid white;
+        width: 100%;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        padding: 20px;
+
+        .col {
+            div {
+                padding: 5px 0;
+                font-size: 20px;
+            }
+        }
+
+        .col-1 {
+            div {
+                color: red;
+            }
+        }
+
+        .col-1>div::after {
+            content: ":";
+            margin-right: 20px;
+        }
+    }
+}
+
+a {
+    color: white
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+
+.logo-mine {
+    transform: rotate(-6deg);
+    transition: all .3s ease;
+
+    a {
+        font-size: 25px;
+        color: #fff;
+        font-weight: 700;
+        background-color: red;
+        border-radius: 40px;
+        border-bottom: 2px solid white;
+        text-shadow: 2px 2px 0px #000;
+        font-family: "Leckerli One";
+    }
+}
+
+.logo-mine:hover {
+    transform: rotate(0deg);
+}
+
+.navbar {
+
+    border-bottom: 2px solid red;
+    position: sticky;
+    top: 0;
+    background-color: black;
+    height: 10vh;
+
+
+    .container {
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 90%;
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    .active {
+        background-color: red;
+    }
+
+    .nav-links {
+        a {
+            text-decoration: none;
+            margin-left: 30px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 17px;
+        }
+
+        a:not(.active):hover {
+            background-color: white;
+            color: black;
+            transition: 0.5s;
+        }
+    }
+
+
+
+}
+
+.home {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.regions {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    gap: 10px 10px;
+    text-align: center;
+    padding: 20px;
+    cursor: pointer;
+
+    .region {
+        border: 1px solid red;
+        border-radius: 5px;
+        padding: 5px 0;
+    }
+
+    .region:hover {
+        transform: scale(.9);
+        background-color: red;
+        transition: .5s;
+    }
+}
+
+.region-details {
+    padding: 20px;
+    display: flex;
+
+    .no-provinces {
+        position: fixed;
+        left: 0;
+        height: 90vh;
+        display: flex;
+        font-size: 40px;
+        font-weight: bold;
+        color: red;
+        padding: 0 5px;
+        border-right: 1px solid red;
+    }
+
+    .provinces {
+        display: inline-block;
+        border-right: 1px solid red;
+        padding-right: 20px;
+        width: 20%;
+
+        .province {
+            padding: 4px 8px;
+            margin-bottom: 5px;
+            border: 1px solid red;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .province:hover {
+            background-color: red;
+            color: black;
+            transition: .5s;
+            cursor: pointer;
+        }
+    }
+
+    .covid-details {
+        width: 80%;
+        position: fixed;
+        left: 20%;
+        height: 90vh;
+        margin-top: 10vh;
+
+        .header {
+            width: 50%;
+        }
+    }
+}
+
+.province-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+
+    .header {
+        width: 40%;
+    }
+}
+
+.search-container{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .search{
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    input{
+        border: 2px solid red;
+        outline: none;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
+
+    i{
+        color: red;
+        position: absolute;
+        right: 5px;
+    }
+}
